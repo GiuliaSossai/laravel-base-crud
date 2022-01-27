@@ -3,7 +3,7 @@
 @section('content')
    
    <main class="container">
-      <h1>lista comics</h1>
+      <h1>Our Comics</h1>
 
       <table class="table">
          <thead>
@@ -21,8 +21,8 @@
                   <td>{{ $comic->title }}</td>
                   <td>{{ $comic->price }}</td>
                   <td> <a href="{{ route('comics.show', $comic) }}" class="btn btn-info">show</a> </td>
-                  <td> <a href="" class="btn btn-warning">edit</a> </td>
-                  <td> <a href="" class="btn btn-danger">delete</a> </td>
+                  <td> <a href="{{ route('comics.edit', $comic) }}" class="btn btn-warning">edit</a> </td>
+                  <td> <a href="{{ route('comics.destroy', $comic) }}" class="btn btn-danger">delete</a> </td>
                </tr>
             @endforeach
          </tbody>

@@ -28,6 +28,10 @@
          </tbody>
       </table>
 
+      <div>
+         {{ $comics->links() }}
+      </div>
+
    </main>
 
 @endsection

@@ -3,14 +3,26 @@
 @section('content')
    
    <main class="container">
-      <h1>{{ $comic->title }}</h1>
-      <div class="my-4">
+      <h1 class="mb-5">{{ $comic->title }}</h1>
+      {{-- <div class="my-4">
          <img src="{{ $comic->image }}" alt="">
       </div>
       <p>Price: {{ $comic->price }}£</p>
       <p>Series: {{ $comic->series }}</p>
       <p>Type: {{ $comic->type }}</p>
-      <p>{{ $comic->description }}</p>
+      <p class="w-75">{{ $comic->description }}</p> --}}
+      <div class="row mb-5">
+         <div class="col-4">
+            <img src="{{ $comic->image }}" alt="">
+         </div>
+         <div class="col-8">
+            <p>Price: {{ $comic->price }}£</p>
+            <p>Series: {{ $comic->series }}</p>
+            <p>Type: {{ $comic->type }}</p>
+            <p>{{ $comic->description }}</p>
+         </div>
+
+      </div>
 
       <div> <a href="{{ route('comics.index') }}"> << back </a> </div>
 

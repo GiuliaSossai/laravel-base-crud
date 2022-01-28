@@ -22,7 +22,13 @@
                   <td>{{ $comic->price }}</td>
                   <td> <a href="{{ route('comics.show', $comic) }}" class="btn btn-info">show</a> </td>
                   <td> <a href="{{ route('comics.edit', $comic) }}" class="btn btn-warning">edit</a> </td>
-                  <td> <a href="{{ route('comics.destroy', $comic) }}" class="btn btn-danger">delete</a> </td>
+                  <td>
+                     <form action="{{ route('comics.destroy', $comic) }}" method="POST">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="btn btn-danger">delete</button>
+                     </form>   
+                  </td>
                </tr>
             @endforeach
          </tbody>

@@ -4,16 +4,10 @@
    
    <main class="container">
       <h1 class="mb-5">{{ $comic->title }}</h1>
-      {{-- <div class="my-4">
-         <img src="{{ $comic->image }}" alt="">
-      </div>
-      <p>Price: {{ $comic->price }}£</p>
-      <p>Series: {{ $comic->series }}</p>
-      <p>Type: {{ $comic->type }}</p>
-      <p class="w-75">{!! $comic->description !!}</p> --}}
+      
       <div class="row mb-5">
          <div class="col-4">
-            <img src="{{ $comic->image }}" alt="">
+            <img src="{{ $comic->image }}" alt="{{ $comic->title }}" class="img-fluid">
          </div>
          <div class="col-8">
             <p>Price: {{ $comic->price }}£</p>

@@ -19,7 +19,7 @@
 
       </div>
       
-      <div> <a href="{{ route('comics.index') }}"> << back </a> </div>
+      <div class="mt-4"> <a href="{{ route('comics.index') }}"> << back </a> </div>
 
    </main>
 

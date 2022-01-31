@@ -15,7 +15,7 @@ class ComicController extends Controller
      */
     public function index()
     {
-        $comics = Comic::paginate(4);
+        $comics = Comic::orderBy('id', 'desc')->paginate(4);
         
         return view('comics.home', compact('comics'));
     }
@@ -39,6 +39,8 @@ class ComicController extends Controller
     public function store(Request $request)
     {
         //dd($request->all());
+
+        $request->validate($this->getValidData(), $this->getMessageError());
         
         $data = $request->all();
 
@@ -92,6 +94,8 @@ class ComicController extends Controller
      */
     public function update(Request $request, Comic $comic)
     {
+        $request->validate($this->getValidData(), $this->getMessageError());
+        
         $data = $request->all();
 
         $data['slug'] = Str::slug($data['title'], '-');
@@ -111,5 +115,39 @@ class ComicController extends Controller
         $comic->delete();
 
         return redirect()->route('comics.index');
+    }
+
+
+
+    //funzioni custom
+    public function getValidData(){
+        return [
+            'title'=>"required|max:100",
+            'description'=>"min:3",
+            'image'=>"required",
+            'price'=>"required|numeric|between:0,99.99",
+            'series'=>"required|max:50",
+            'sale_date'=>"required|date|max:20",
+            'type'=>"required|max:50"  
+        ];
+    }
+
+    public function getMessageError(){
+        return [
+            'title.required'=>'The title is compulsory',
+            'title.max'=>'The title is too long',
+            'description.min'=>'The description is too short',
+            'image.required'=>'Image URL is compulsory',
+            'price.required'=>'The price is compulsory',
+            'price.numeric'=>'The price must be a number',
+            'price.between'=>'The price has to be set between 0 and 99.99',
+            'series.required'=>'Series is compulsory',
+            'series.max'=>'Series is too long',
+            'sale_date'=>'The date of sale is compulsory',
+            'sale_date'=>'The date of sale is too long',
+            'type.required'=>'Type is compulsory',
+            'type.max'=>'Type is too long'
+
+        ];
     }
 }

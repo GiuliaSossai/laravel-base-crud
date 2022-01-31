@@ -1,0 +1,30 @@
+@import 'partials/mixins';
+
+section {
+    background-color: $blue;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 2rem 0;
+    font-size: 14px;
+    .container {
+       padding: 0 2rem;
+       @include flex-btw;
+       .item {
+            display: flex;
+            align-items: center;
+            .little-img {
+                width: 30px;
+                margin-right: 1rem;
+            }
+            a {
+                color: #fff;
+                &:hover {
+                    color: #000;
+                }
+                // svg {
+                //     filter: contrast(200%);
+                // }
+            }
+        }
+    }
+ }

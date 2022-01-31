@@ -1,0 +1,82 @@
+@import 'partials/mixins';
+@import 'partials/vars';
+@import 'partials/utilities';
+@import 'partials/generals';
+
+
+.footer-top {
+    height: 450px;
+    overflow: hidden;
+    background-position: center;
+    background-image: url('/img/footer-bg.jpg');
+    background-size: cover; 
+    .container {
+      @include flex-btw;
+      .big-logo{
+        width: 40%;
+        height: 450px;
+        background-image: url('/img/dc-logo-bg.png');
+        background-position: center;
+        background-size: cover;
+      } 
+    }  
+}
+
+.related {
+    display: flex;
+    .little-title {
+        h3 {
+            color: #fff;
+            @include titles;
+            padding: 0 3rem 1rem 0;
+        }
+        &.listed {
+            padding: 1rem 0;
+        }
+        p {
+            margin-bottom: 0;
+            a {
+                color: #959595;
+                font-size: 16px;
+                margin: 0 20px 7px 0;
+                &:hover {
+                color: $main-color;
+                }
+            }
+        } 
+        
+    }
+}
+
+.footer-bottom {
+    background-color: #303030;
+    .container {
+        height: 150px;
+        @include flex-btw;
+        .call-to-action a {
+            color: #fff;
+            text-transform: uppercase;
+            font-size: 22px;
+            border: 2px solid $main-color;
+            padding: 1rem;
+            &:hover {
+                color: $main-color;
+            }
+        }
+        .follow {
+            @include flex-btw;
+            h3 {
+                @include titles;
+                color: $main-color;
+                padding-right: 1rem;  
+            }
+            ul {
+                @include flex-btw;
+                a {
+                    padding: 0 8px;  
+                }
+            }
+            
+        }  
+    }
+}

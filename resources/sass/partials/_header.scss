@@ -1,3 +1,8 @@
+@import 'partials/vars';
+@import 'partials/generals';
+@import 'partials/mixins';
+@import 'partials/utilities';
+
 header {
     height: 150px;
     .container {
@@ -7,6 +12,25 @@ header {
         .header-left {
             img {
              margin-top: 23px;
+            }
+        }
+
+        .header-right {
+            ul {
+                height: 146px;
+                li {
+                    display: inline-block;
+                    padding: 0 1rem;
+                    a {
+                        line-height: 146px;
+                        box-sizing: content-box;
+                        &.active,
+                        &:hover {
+                            color: $main-color;
+                            border-bottom: 4px solid $main-color;
+                        }
+                    }
+                }   
             }
         }
     }

@@ -5,6 +5,10 @@
    <main class="container">
       <h1>Our Comics</h1>
 
+      @if (session('deleted'))
+      <p class="alert alert-danger" role="alert"> {{ session('deleted') }} </p>
+      @endif
+
       <table class="table">
          <thead>
             <tr>
@@ -23,7 +27,10 @@
                   <td> <a href="{{ route('comics.show', $comic) }}" class="btn btn-info">show</a> </td>
                   <td> <a href="{{ route('comics.edit', $comic) }}" class="btn btn-warning">edit</a> </td>
                   <td>
-                     <form action="{{ route('comics.destroy', $comic) }}" method="POST">
+                     <form 
+                        action="{{ route('comics.destroy', $comic) }}" method="POST"
+                        onsubmit="return confirm('Do you really want to delete {{$comic->title}}?')"
+                     >
                         @csrf
                         @method('DELETE')
                         <button type="submit" class="btn btn-danger">delete</button>

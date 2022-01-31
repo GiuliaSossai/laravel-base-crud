@@ -7,6 +7,7 @@
 
         <h1 class="mb-3">submit new comics!</h1>
 
+        <!-- lista errori se presenti -->
         @if ($errors->any())
         <div class="alert alert-danger" role="alert">
             <ul>

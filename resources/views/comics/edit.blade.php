@@ -5,6 +5,8 @@
    <main class="container">
         <h1>modifica di: {{ $comic->title }}</h1>
 
+
+        <!-- se ci sono, stampo gli errori -->
         @if ($errors->any())
         <div class="alert alert-danger" role="alert">
             <ul>

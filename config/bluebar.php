@@ -22,7 +22,7 @@ return [
   ],
   [
     "alt" => "/dc-power-visa",
-    "img" => "../img/buy-dc-power-visa.svg",
+    "img" => "../img/buy-dc-power-visa.409b42b7.svg",
     "text" => "power visa"
   ],
 ];

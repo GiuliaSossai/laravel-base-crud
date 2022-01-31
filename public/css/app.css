@@ -10967,61 +10967,6 @@ a.text-dark:focus {
   font-size: 10px;
 }
 
-.gs-bg-dark {
-  background-color: #1C1C1C;
-  text-align: center;
-}
-
-.gs-bg-dark .jumbotron {
-  height: 400px;
-  background-position: top;
-  background-image: url("/img/jumbotron.jpg");
-  background-size: cover;
-}
-
-.gs-bg-dark .container {
-  color: #fff;
-  text-transform: uppercase;
-  text-align: start;
-}
-
-.gs-bg-dark .container button.big-btn {
-  font-size: 24px;
-  padding: 8px 24px;
-  margin-top: -25px;
-  margin-bottom: 2rem;
-}
-
-.gs-bg-dark .container .main-cards {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.gs-bg-dark .card-box {
-  flex-basis: 16.6666666667%;
-  border: 1rem solid #1C1C1C;
-  margin-bottom: 1rem;
-}
-
-.gs-bg-dark .card-box img {
-  width: 100vw;
-  height: 188px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: top;
-     object-position: top;
-}
-
-.gs-bg-dark .card-box h5 {
-  padding-top: 8px;
-}
-
-.gs-bg-dark button {
-  font-size: 12px;
-  padding: 8px 40px;
-  margin-bottom: 1rem;
-}
-
 * {
   padding: 0;
   margin: 0;
@@ -11054,8 +10999,8 @@ ul {
 
 .clearfix::after {
   content: "";
-  display: table;
   clear: both;
+  display: table;
 }
 
 button {
@@ -11076,8 +11021,16 @@ header .container {
   font-weight: bold;
 }
 
+header .container .header-left {
+  float: left;
+}
+
 header .container .header-left img {
   margin-top: 23px;
+}
+
+header .container .header-right {
+  float: right;
 }
 
 header .container .header-right ul {
@@ -11098,39 +11051,7 @@ header .container .header-right ul li a.active,
 header .container .header-right ul li a:hover {
   color: #0282F9;
   border-bottom: 4px solid #0282F9;
-}
-
-section {
-  background-color: #3490dc;
-  color: #fff;
-  text-transform: uppercase;
-  padding: 2rem 0;
-  font-size: 14px;
-}
-
-section .container {
-  padding: 0 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-section .container .item {
-  display: flex;
-  align-items: center;
-}
-
-section .container .item .little-img {
-  width: 30px;
-  margin-right: 1rem;
-}
-
-section .container .item a {
-  color: #fff;
-}
-
-section .container .item a:hover {
-  color: #000;
+  text-decoration: none;
 }
 
 .container {
@@ -11141,8 +11062,8 @@ section .container .item a:hover {
 
 .clearfix::after {
   content: "";
-  display: table;
   clear: both;
+  display: table;
 }
 
 button {
@@ -11276,47 +11197,91 @@ ul {
   padding: 0 8px;
 }
 
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+.gs-bg-dark {
+  background-color: #1C1C1C;
+  text-align: center;
 }
 
-body {
-  font-family: "Source Sans Pro", sans-serif;
+.gs-bg-dark .jumbotron {
+  height: 400px;
+  background-position: top;
+  background-image: url("/img/jumbotron.jpg");
+  background-size: cover;
 }
 
-img {
-  max-width: 100%;
+.gs-bg-dark .container {
+  color: #fff;
+  text-transform: uppercase;
+  text-align: start;
 }
 
-a {
-  color: black;
-  text-decoration: none;
-  display: inline-block;
+.gs-bg-dark .container button.big-btn {
+  font-size: 24px;
+  padding: 8px 24px;
+  margin-top: -25px;
+  margin-bottom: 2rem;
 }
 
-ul {
-  list-style: none;
+.gs-bg-dark .container .main-cards {
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.container {
-  max-width: 1320px;
-  min-width: 1000px;
-  margin: 0 auto;
+.gs-bg-dark .card-box {
+  flex-basis: 16.6666666667%;
+  border: 1rem solid #1C1C1C;
+  margin-bottom: 1rem;
 }
 
-.clearfix::after {
-  content: "";
-  display: table;
-  clear: both;
+.gs-bg-dark .card-box img {
+  width: 100vw;
+  height: 188px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
 }
 
-button {
+.gs-bg-dark .card-box h5 {
+  padding-top: 8px;
+}
+
+.gs-bg-dark button {
+  font-size: 12px;
+  padding: 8px 40px;
+  margin-bottom: 1rem;
+}
+
+section {
   background-color: #0282F9;
   color: #fff;
   text-transform: uppercase;
-  font-weight: bold;
-  border: none;
+  padding: 2rem 0;
+  font-size: 14px;
+}
+
+section .container {
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+section .container .item {
+  display: flex;
+  align-items: center;
+}
+
+section .container .item .little-img {
+  width: 30px;
+  margin-right: 1rem;
+}
+
+section .container .item a {
+  color: #fff;
+}
+
+section .container .item a:hover {
+  color: #000;
 }
 

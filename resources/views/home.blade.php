@@ -3,7 +3,7 @@
 @section('content')
 
    <main class="gs-bg-dark">
-      <div class="jumbotron"></div>
+      <div class="jumbotron mb-0"></div>
 
       <div class="container">
          <button class="big-btn">current series</button>

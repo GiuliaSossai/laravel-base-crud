@@ -10967,3 +10967,116 @@ a.text-dark:focus {
   font-size: 10px;
 }
 
+.gs-bg-dark {
+  background-color: #1C1C1C;
+  text-align: center;
+}
+
+.gs-bg-dark .jumbotron {
+  height: 400px;
+  background-position: top;
+  background-image: url("/img/jumbotron.jpg");
+  background-size: cover;
+}
+
+.gs-bg-dark .container {
+  color: #fff;
+  text-transform: uppercase;
+  text-align: start;
+}
+
+.gs-bg-dark .container button.big-btn {
+  font-size: 24px;
+  padding: 8px 24px;
+  margin-top: -25px;
+  margin-bottom: 2rem;
+}
+
+.gs-bg-dark .container .main-cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.gs-bg-dark .card-box {
+  flex-basis: 16.6666666667%;
+  border: 1rem solid #1C1C1C;
+  margin-bottom: 1rem;
+}
+
+.gs-bg-dark .card-box img {
+  width: 100vw;
+  height: 188px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+}
+
+.gs-bg-dark .card-box h5 {
+  padding-top: 8px;
+}
+
+.gs-bg-dark button {
+  font-size: 12px;
+  padding: 8px 40px;
+  margin-bottom: 1rem;
+}
+
+header {
+  height: 150px;
+}
+
+header .container {
+  height: 142px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+header .container .header-left img {
+  margin-top: 23px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  display: inline-block;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  max-width: 1320px;
+  min-width: 1000px;
+  margin: 0 auto;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+button {
+  background-color: #0282F9;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: none;
+}
+

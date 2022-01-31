@@ -1,0 +1,47 @@
+.gs-bg-dark{
+   background-color: #1C1C1C;
+   text-align: center;
+   .jumbotron{
+       height: 400px;
+       background-position: top;
+       background-image: url('/img/jumbotron.jpg');
+       background-size: cover;
+   }
+ 
+   .container{
+       color: #fff;
+       text-transform: uppercase;
+       text-align: start;
+       button.big-btn{
+          font-size: 24px;
+          padding: 8px 24px;
+          margin-top: -25px;
+          margin-bottom: 2rem;
+       }
+       .main-cards{
+          display: flex;
+          flex-wrap: wrap;
+       }  
+   }
+ 
+   .card-box {
+       flex-basis: calc(100% / 6);
+       border: 1rem solid #1C1C1C;
+       margin-bottom: 1rem;
+       img {
+          width: 100vw;
+          height: 188px;
+          object-fit: cover;
+          object-position: top;
+       }
+       h5 {
+          padding-top: 8px;
+       }
+   }
+ 
+   button{
+       font-size: 12px;
+       padding: 8px 40px;
+       margin-bottom: 1rem; 
+   } 
+}
